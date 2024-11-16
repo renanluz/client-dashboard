@@ -1,5 +1,17 @@
-import React from "react";
+'use client';
 
-export default function Home() {
-    return <h1>Welcome to the Client Dashboard!</h1>;
-  }
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
+export default function HomePage() {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '20px' }}>
+      <Typography variant="h4" gutterBottom>
+        Welcome to the Client Dashboard!
+      </Typography>
+      <Button variant="contained" color="secondary">
+        Click Me
+      </Button>
+    </div>
+  );
+}
