@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Box, Button, TextField, Typography } from '@mui/material';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const router = useRouter();
 
   const handleSubmit = () => {
     if (!email || !password) {
@@ -14,7 +16,7 @@ export default function LoginPage() {
       return;
     }
     setError('');
-    alert('Login Successful (Simulated)');
+    router.push('/dashboard')
   };
 
   return (
